@@ -1,12 +1,16 @@
-// JsonClient provides easy access to json documents
-// url String
+/**
+ * JsonClient provides easy access to json documents
+ * @param url String
+ */
 function JsonClient(url) {
   this.url = url;
   this.client = new XMLHttpRequest;
 }
 
-// JsonClient.call
-// callback Function to handle the response
+/**
+ * JsonClient.call
+ * @param callback Function to handle the response
+ */
 JsonClient.prototype.call = function(callback) {
   this.client.onreadystatechange = function() {
     if (this.readyState === XMLHttpRequest.DONE) {

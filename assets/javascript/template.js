@@ -1,8 +1,10 @@
-// Template provides common tools for manipulating the dom
+/**
+ * Template provides common tools for manipulating the dom
+ */
 function Template() {}
 
 /**
- * Template.dom
+ * $template.dom
  * Encapsulate dom manipulation logic here.
  */
 Template.prototype.dom = {
@@ -46,25 +48,31 @@ Template.prototype.dom = {
   }
 };
 
-// Template.insert
-// key String
-// value String
+/**
+ * $template.insert
+ * @param key String
+ * @param value String
+ */
 Template.prototype.insert = function(key, value) {
   this.dom.insert(key, value);
 };
 
-// Template.insert_link
-// key String
-// url String
-// value String
+/**
+ * $template.insert_link
+ * @param key String
+ * @param url String
+ * @param value String
+ */
 Template.prototype.insert_link = function(key, url, value) {
   var element = this.dom.link(url, value);
   this.dom.append(key, element);
 };
 
-// Template.insert_link_list
-// key String
-// values Array
+/**
+ * $template.insert_link_list
+ * @param key String
+ * @param values Array
+ */
 Template.prototype.insert_link_list = function(key, values) {
   for (var i = 0; i < values.length; i++) {
     var link_element = this.dom.link(values[i], values[i]);
@@ -74,9 +82,11 @@ Template.prototype.insert_link_list = function(key, values) {
   }
 };
 
-// Template.insert_list
-// key String
-// values Array
+/**
+ * $template.insert_list
+ * @param key String
+ * @param values Array
+ */
 Template.prototype.insert_list = function(key, values) {
   for (var i = 0; i < values.length; i++) {
     var list_container = this.dom.element('li');
