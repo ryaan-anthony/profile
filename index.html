@@ -36,6 +36,7 @@
     <!--/experience-->
     <footer>
       <h2>ADDITIONAL LINKS:</h2>
+      <ul id="additional_links"></ul>
     </footer>
     <!--/footer-->
     <script>
@@ -48,6 +49,7 @@
         $template.insert('introduction', json.introduction);
         $template.insert_list('summary', json.summary);
         $template.insert_list('certifications', json.certifications);
+        $template.insert_link_list('additional_links', json.additional_links);
       });
     </script>
   </body>
