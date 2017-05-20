@@ -1,5 +1,6 @@
 /**
  * Template provides common tools for manipulating the dom
+ * @author Ryan Tulino rtulino@gmail.com
  */
 function Template() {}
 
