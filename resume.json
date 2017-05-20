@@ -2,5 +2,23 @@
   "name": "Ryan Tulino",
   "position": "Senior Software Engineer",
   "email": "rtulino@gmail.com",
-  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With over 10 years experience solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people."
+  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With over 10 years experience solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people.",
+  "summary": [
+    "Extensive background in ecommerce including payments and identity management.",
+    "Good experience and knowledge of Agile, Scrum, code review, and pair programming.",
+    "Highly knowledgable of Git and Gitflow.",
+    "Experienced consuming and developing REST and SOAP APIs.",
+    "Strong preference towards TDD and 100% “feature” coverage.",
+    "Experience in deployment to both cloud and bare-metal infrastructure.",
+    "Good at data modeling, database development, query optimization.",
+    "Skilled in debugging, application support, system upgrades and performance.",
+    "Good experience with writing technical documents, How-To’s and user guides.",
+    "Planning test strategies, UATs, migration and production support.",
+    "Good experience with various CICD platforms, Vagrant, and Docker."
+  ],
+  "certifications": [
+    "Magento Certified Developer",
+    "Magento Certified Developer PLUS"
+  ]
+
 }

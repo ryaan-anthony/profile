@@ -1,36 +1,61 @@
 // Template provides common tools for manipulating the dom
-// document_object Object
-function Template(document_object) {
-  this.document = document_object;
-}
+function Template() {}
 
-// Template.create
-// type String element tag
-Template.prototype.create = function(type) {
-  return this.document.createElement(type);
+/**
+ * Template.dom
+ * Encapsulate dom manipulation logic here.
+ */
+Template.prototype.dom = {
+  /**
+   * $template.builder.element
+   * type String
+   */
+  element: function(type) {
+    return document.createElement(type);
+  },
+  /**
+   * $template.builder.append
+   * key String
+   * node Node
+   */
+  append: function(key, node) {
+    document.getElementById(key).appendChild(node);
+  },
+  /**
+   * $template.builder.insert
+   * key String
+   * value String
+   */
+  insert: function(key, value) {
+    document.getElementById(key).innerHTML = value;
+  }
 };
 
-// Template.append
-// key String
-// node Node
-Template.prototype.append = function(key, node) {
-  this.document.getElementById(key).appendChild(node);
-};
-
-// Template.set
+// Template.insert
 // key String
 // value String
-Template.prototype.set = function(key, value) {
-  this.document.getElementById(key).innerHTML = value;
+Template.prototype.insert = function(key, value) {
+  this.dom.insert(key, value);
 };
 
-// Template.set_link
+// Template.insert_link
 // key String
 // url String
 // value String
-Template.prototype.create_link = function(key, url, value) {
-  var element = this.create('a');
+Template.prototype.insert_link = function(key, url, value) {
+  var element = this.dom.element('a');
   element.href = url;
   element.innerHTML = value;
-  this.append(key, element);
+  this.dom.append(key, element);
+};
+
+// Template.insert_list
+// key String
+// values Array
+Template.prototype.insert_list = function(key, values) {
+  for (var i = 0; i < values.length; i++) {
+    var element = this.dom.element('li');
+    element.innerHTML = values[i];
+    this.dom.append(key, element);
+  }
 };

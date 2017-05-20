@@ -7,21 +7,29 @@
   <body>
     <header>
       <div id="email"></div>
-      <h1><span id="name"></span> <span id="position"></span></h1>
+      <h1>
+        <span id="name"></span>
+        <span id="position"></span>
+      </h1>
+      <hr />
     </header>
     <!--/header-->
     <section data-introduction>
-      <article id="introduction"></article>
-      <article id="summary">
-        <h2>EXPERIENCE SUMMARY:</h2>
+      <article>
+        <p id="introduction"></p>
       </article>
-      <article id="certifications">
+      <article>
+        <h2>EXPERIENCE SUMMARY:</h2>
+        <ul id="summary"></ul>
+      </article>
+      <article>
         <h2>PROFESSIONAL CERTIFICATIONS:</h2>
+        <ul id="certifications"></ul>
       </article>
     </section>
     <!--/certifications-->
     <section data-experience>
-      <article id="experience">
+      <article>
         <h2>EXPERIENCE:</h2>
       </article>
     </section>
@@ -31,12 +39,15 @@
     </footer>
     <!--/footer-->
     <script>
-      var template = new Template(document);
+      var $template = new Template;
       new JsonClient('resume.json').call(function(json){
-        template.create_link('email', 'mailto:'+json.email, json.email);
-        template.set('name', json.name);
-        template.set('position', json.position);
-        template.set('introduction', json.introduction);
+        console.log(json);
+        $template.insert_link('email', 'mailto:'+json.email, json.email);
+        $template.insert('name', json.name);
+        $template.insert('position', json.position);
+        $template.insert('introduction', json.introduction);
+        $template.insert_list('summary', json.summary);
+        $template.insert_list('certifications', json.certifications);
       });
     </script>
   </body>
