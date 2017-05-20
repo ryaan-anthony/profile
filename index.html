@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="assets/javascript/json_client.js"></script>
+    <script src="assets/javascript/template.js"></script>
+  </head>
   <body>
     <header>
       <div id="email"></div>
@@ -26,5 +30,14 @@
       <h2>ADDITIONAL LINKS:</h2>
     </footer>
     <!--/footer-->
+    <script>
+      var template = new Template(document);
+      new JsonClient('resume.json').call(function(json){
+        template.create_link('email', 'mailto:'+json.email, json.email);
+        template.set('name', json.name);
+        template.set('position', json.position);
+        template.set('introduction', json.introduction);
+      });
+    </script>
   </body>
 </html>
