@@ -9,7 +9,7 @@ function JsonClient(url) {
 // callback Function to handle the response
 JsonClient.prototype.call = function(callback) {
   this.client.onreadystatechange = function() {
-    if (this.readyState == XMLHttpRequest.DONE) {
+    if (this.readyState === XMLHttpRequest.DONE) {
       var response = JSON.parse(this.responseText);
       callback(response);
     }
