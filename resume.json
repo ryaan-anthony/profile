@@ -2,7 +2,7 @@
   "name": "Ryan Anthony Tulino",
   "title": "Senior Software Engineer",
   "email": "rtulino@gmail.com",
-  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With a passion for and breadth of experience in solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people.",
+  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With a breadth of experience in solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles.",
   "summary": [
     "Extensive background in ecommerce including payments and identity management.",
     "Good experience and knowledge of Agile, Scrum, code review, and pair programming.",
@@ -48,9 +48,10 @@
           "description": "PTF is our payments, tax, and fraud offering for our client’s webstores. This initiative was to address the immediate need for a client's Magento webstore.",
           "responsibilities": [
             "Put together a small team of developers, QA testers, and managers to meet the tight deadlines.",
-            "Provided credit card and paypal checkout options via our payment service API",
+            "Provided credit card and paypal checkout options via our payment service API.",
+            "Implemented fraud checks, 41st parameter and other collector scripts.",
             "Used braintree client side encryption and tokenization.",
-            "Connected to message brokering system for payments responses.",
+            "Connected to message brokering system for payments and fraud responses.",
             "Lead initial development through to deployment."
           ],
           "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL6, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"

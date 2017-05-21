@@ -1,3 +1,4 @@
+body {margin: 20px}
 body > * {font-family: Avenir, serif}
 header #title {font-weight: bold}
 header #email {float:right}
