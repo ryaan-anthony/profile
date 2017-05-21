@@ -32,7 +32,7 @@ function JsonObject(data) {
   for (var key in data) {
     if (data.hasOwnProperty(key) === false) continue;
     var value = data[key];
-    if (value instanceof Array) value['each'] = this.each;
+    if (value instanceof Array || value instanceof Object) value = new JsonObject(value);
     this[key] = value;
   }
 }
@@ -40,7 +40,7 @@ function JsonObject(data) {
  * @param callback {Function}
  */
 JsonObject.prototype.each = function(callback) {
-  for (var i = 0; i < this.length; i++) {
+  for (var i = 0; i < Object.keys(this).length; i++) {
     callback(this[i]);
   }
 };

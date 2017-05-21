@@ -2,7 +2,7 @@
   "name": "Ryan Anthony Tulino",
   "title": "Senior Software Engineer",
   "email": "rtulino@gmail.com",
-  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With over 10 years experience solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people.",
+  "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With a passion for and breadth of experience in solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people.",
   "summary": [
     "Extensive background in ecommerce including payments and identity management.",
     "Good experience and knowledge of Agile, Scrum, code review, and pair programming.",
@@ -37,13 +37,13 @@
   "experience": [
     {
       "role": "Member of Technical Staff",
-      "company": "Radial, Inc",
+      "company": "Radial, Inc - ",
       "location": "King of Prussia, PA.",
       "start_date": "April 2016",
       "end_date": "Now",
       "projects": [
         {
-          "title": "Magento PTF",
+          "title": "Project 1: Magento PTF",
           "homepage": "https://github.com/RadialCorp/magento-ptf-build",
           "description": "PTF is our payments, tax, and fraud offering for our client’s webstores. This initiative was to address the immediate need for a client's Magento webstore.",
           "responsibilities": [
@@ -56,7 +56,7 @@
           "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL6, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         },
         {
-          "title": "Order Management UI",
+          "title": "Project 2: Order Management UI",
           "homepage": "https://www.radial.com/omnichannel-technology",
           "description": "The Radial Order Management product provides a common user interface for customer sales representatives to manage webstore orders for leading retailers and brands.",
           "responsibilities": [
@@ -74,7 +74,7 @@
           "environment": "Ruby 2.3, Rails 4, Passenger 5, GOCD, Logstash, Kibana, Redis, MySQL, GitLab, Rally, Confluence"
         },
         {
-          "title": "Store Fulfillment UI",
+          "title": "Project 3: Store Fulfillment UI",
           "homepage": "https://www.radial.com/fulfillment-transportation",
           "description": "The Radial Store Fulfillment product provides a common user interface for store associates to manage in-store pickup and ship to home orders.",
           "responsibilities": [
@@ -92,7 +92,7 @@
     },
     {
       "role": "Senior Software Engineer",
-      "company": "eBay Enterprise",
+      "company": "eBay Enterprise - ",
       "location": "King of Prussia, PA.",
       "start_date": "July 2015",
       "end_date": "April 2016",
@@ -114,17 +114,18 @@
     },
     {
       "role": "Lead Magento Developer",
-      "company": "Inverse Paradox, LLC",
+      "company": "Inverse Paradox, LLC - ",
       "location": "Penndel, PA.",
       "start_date": "April 2012",
       "end_date": "June 2015",
       "projects": [
         {
           "title": "Magento webstore development",
+          "homepage": "https://www.inverseparadox.com/",
           "description": "With a client portfolio ranging from automotive and baked goods to jewelry and apparel, I helped enable this emerging web agency become a viable solutions provider for national/regional small/mid-market clients.",
           "responsibilities": [
             "Participated in the launch of over 20 Magento webstores",
-            "Custom integrations including payments, CRM, CMS, ERP, PIM, etc..",
+            "Custom integrations including payments, CRM, CMS, ERP, PIM, etc.",
             "Advocated for process changes to improve project and task management.",
             "Advocated for and implemented version control and automated deployments.",
             "Participated in client discovery and review meetings.",
@@ -159,24 +160,7 @@
           "environment": "PHP5.6, MySQL, RHEL6, Redis, Elasticsearch, Magento EE 1.13-1.14"
         }
       ]
-    },
-    {
-      "role": "Independent Programmer",
-      "company": "(Part-time / Full-time)",
-      "location": "Philadelphia, PA.",
-      "start_date": "April 2006",
-      "end_date": "April 2012",
-      "projects": [
-        {
-          "title": "",
-          "description": "",
-          "responsibilities": [
-            ""
-          ],
-          "environment": ""
-        }
-      ]
     }
   ],
-  "footnote": "This resume was generated by <a href=\"https://github.com/ryaan-anthony/profile\">https://github.com/ryaan-anthony/profile</a> in %s seconds!"
+  "footnote": "This resume was generated by <a href=\"https://github.com/ryaan-anthony/profile\">https://github.com/ryaan-anthony/profile</a> in %sms!"
 }

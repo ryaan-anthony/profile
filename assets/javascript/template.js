@@ -5,7 +5,7 @@
  * @constructor
  */
 function Template(element_id) {
-  this.element = document.getElementById(element_id);
+  this.container = element_id instanceof Object ? element_id : document.getElementById(element_id);
 }
 
 Template.prototype = {
@@ -40,10 +40,27 @@ Template.prototype = {
   },
 
   /**
+   * @param child {Element}
+   */
+  append: function(child) {
+    this.container.appendChild(child);
+  },
+
+  /**
+   * @param type {string}
+   * @param value {string}
+   */
+  element: function(type, value) {
+    var element = this.builder.element(type);
+    element.innerHTML = value;
+    this.append(element);
+  },
+
+  /**
    * @param value {string}
    */
   html: function(value) {
-    this.element.innerHTML = value;
+    this.container.innerHTML = value;
   },
 
   /**
@@ -51,7 +68,7 @@ Template.prototype = {
    */
   text: function(value) {
     var text = this.builder.text(value);
-    this.element.appendChild(text);
+    this.append(text);
   },
 
   /**
@@ -60,16 +77,7 @@ Template.prototype = {
    */
   link: function(href, text) {
     var link_element = this.builder.link(href, text);
-    this.element.appendChild(link_element);
-  },
-
-  /**
-   * @param value {string}
-   */
-  list: function(value) {
-    var list_item = this.builder.element('li');
-    list_item.innerHTML = value;
-    this.element.appendChild(list_item);
+    this.append(link_element);
   },
 
   /**
@@ -80,6 +88,6 @@ Template.prototype = {
     var link_element = this.builder.link(href, text);
     var list_item = this.builder.element('li');
     list_item.appendChild(link_element);
-    this.element.appendChild(list_item);
+    this.append(list_item);
   }
 };
