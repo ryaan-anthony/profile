@@ -1,5 +1,5 @@
+* {font-family: Avenir, Helvetica, sans-serif}
 body {margin: 20px}
-body > * {font-family: Avenir, Helvetica, sans-serif}
-header #title {font-weight: bold}
-header #email {float:right}
-footer #footnote {text-align: center}
+#email {float:right}
+#title {font-weight: bold}
+#footnote {text-align: center}
