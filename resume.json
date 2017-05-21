@@ -1,6 +1,6 @@
 {
-  "name": "Ryan Tulino",
-  "position": "Senior Software Engineer",
+  "name": "Ryan Anthony Tulino",
+  "title": "Senior Software Engineer",
   "email": "rtulino@gmail.com",
   "introduction": "A skilled professional with extensive knowledge of web technologies and a proven track record in developing thoughtfully designed software. With over 10 years experience solving interesting problems, debugging performance concerns, automating deployments, and providing production support. My specialities include PHP, Ruby, and JavaScript with deep knowledge of SOLID/OOP principles and an eagerness to learn from and mentor other talented people.",
   "summary": [
@@ -17,14 +17,122 @@
     "Good experience with various CICD platforms, Vagrant, and Docker."
   ],
   "certifications": [
-    "Magento Certified Developer",
-    "Magento Certified Developer PLUS"
+    {
+      "type": "Magento Certified Developer",
+      "id": "y21dtt50b2",
+      "date": "December 2013"
+    },
+    {
+      "type": "Magento Certified Developer PLUS",
+      "id": "31327995",
+      "date": "April 2015"
+    }
   ],
   "additional_links": [
     "https://www.linkedin.com/in/ryantulino/",
     "https://github.com/ryaan-anthony",
     "https://twitter.com/ryaan_anthony",
     "https://ryaan-anthony.github.io/profile/"
+  ],
+  "experience": [
+    {
+      "role": "Member of Technical Staff",
+      "company": "Radial, Inc",
+      "location": "King of Prussia, PA.",
+      "start_date": "April 2016",
+      "end_date": "Now",
+      "projects": [
+        {
+          "title": "Magento PTF",
+          "homepage": "https://github.com/RadialCorp/magento-ptf-build",
+          "description": "PTF is our payments, tax, and fraud offering for our client’s webstores. This initiative was to address the immediate need of our client Everlast and their Magento webstore. My role as the lead engineer was to put together a small team of developers, QA testers, and managers to meet the tight deadlines and deliver a Magento extension and provide instructions for the system integrators on how to install and configure it.",
+          "responsibilities": [
+            "Provided credit card and paypal checkout options via our payment service API",
+            "Used braintree client side encryption and tokenization.",
+            "Connected to message brokering system for payments responses.",
+            "Lead initial development through to deployment."
+          ],
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, Composer, Circle CI, RabbitMQ, jQuery"
+        },
+        {
+          "title": "Order Management UI",
+          "homepage": "https://www.radial.com/omnichannel-technology",
+          "description": "",
+          "responsibilities": [
+            ""
+          ],
+          "environment": ""
+        }
+      ]
+    },
+    {
+      "role": "Senior Software Engineer",
+      "company": "eBay Enterprise",
+      "location": "King of Prussia, PA.",
+      "start_date": "July 2015",
+      "end_date": "April 2016",
+      "projects": [
+        {
+          "title": "",
+          "description": "",
+          "responsibilities": [
+            ""
+          ],
+          "environment": ""
+        }
+      ]
+    },
+    {
+      "role": "Lead Magento Developer",
+      "company": "Inverse Paradox, LLC",
+      "location": "Penndel, PA.",
+      "start_date": "April 2012",
+      "end_date": "June 2015",
+      "projects": [
+        {
+          "title": "",
+          "description": "",
+          "responsibilities": [
+            ""
+          ],
+          "environment": ""
+        }
+      ]
+    },
+    {
+      "role": "Magento Consultant",
+      "company": "",
+      "location": "Philadelphia, PA.",
+      "start_date": "January 2015",
+      "end_date": "Now",
+      "projects": [
+        {
+          "title": "",
+          "description": "",
+          "responsibilities": [
+            ""
+          ],
+          "environment": ""
+        }
+      ]
+    },
+    {
+      "role": "Independent Programmer",
+      "company": "(Part-time / Full-time)",
+      "location": "Philadelphia, PA.",
+      "start_date": "April 2006",
+      "end_date": "April 2012",
+      "projects": [
+        {
+          "title": "",
+          "description": "",
+          "responsibilities": [
+            ""
+          ],
+          "environment": ""
+        }
+      ]
+    }
   ]
 
 }

@@ -1,97 +1,85 @@
 /**
  * Template provides common tools for manipulating the dom
  * @author Ryan Tulino rtulino@gmail.com
+ * @param element_id {string}
+ * @constructor
  */
-function Template() {}
+function Template(element_id) {
+  this.element = document.getElementById(element_id);
+}
 
-/**
- * $template.dom
- * Encapsulate dom manipulation logic here.
- */
-Template.prototype.dom = {
-  /**
-   * $template.dom.element
-   * type String
-   */
-  element: function(type)
-  {
-    return document.createElement(type);
+Template.prototype = {
+  builder: {
+    /**
+     * @param type {string}
+     * @returns {Element}
+     */
+    element: function(type) {
+      return document.createElement(type);
+    },
+
+    /**
+     * @param url {string}
+     * @param value {string}
+     * @returns {*|Element}
+     */
+    link: function(url, value) {
+      var element = this.element('a');
+      element.href = url;
+      element.innerHTML = value;
+      return element;
+    },
+
+    /**
+     * @param value {string}
+     * @returns {Text}
+     */
+    text: function(value) {
+      return document.createTextNode(value);
+    }
   },
+
   /**
-   * $template.dom.append
-   * key String
-   * node Node
+   * @param value {string}
    */
-  append: function(key, node)
-  {
-    document.getElementById(key).appendChild(node);
+  html: function(value) {
+    this.element.innerHTML = value;
   },
+
   /**
-   * $template.dom.insert
-   * key String
-   * value String
+   * @param value {string}
    */
-  insert: function(key, value)
-  {
-    document.getElementById(key).innerHTML = value;
+  text: function(value) {
+    var text = this.builder.text(value);
+    this.element.appendChild(text);
   },
+
   /**
-   * $template.dom.link
-   * key String
-   * value String
+   * @param href {string}
+   * @param text {string}
    */
-  link: function(url, value)
-  {
-    var element = this.element('a');
-    element.href = url;
-    element.innerHTML = value;
-    return element;
-  }
-};
+  link: function(href, text) {
+    var link_element = this.builder.link(href, text);
+    this.element.appendChild(link_element);
+  },
 
-/**
- * $template.insert
- * @param key String
- * @param value String
- */
-Template.prototype.insert = function(key, value) {
-  this.dom.insert(key, value);
-};
+  /**
+   * @param value {string}
+   */
+  list: function(value) {
+    var list_item = this.builder.element('li');
+    list_item.innerHTML = value;
+    this.element.appendChild(list_item);
+  },
 
-/**
- * $template.insert_link
- * @param key String
- * @param url String
- * @param value String
- */
-Template.prototype.insert_link = function(key, url, value) {
-  var element = this.dom.link(url, value);
-  this.dom.append(key, element);
-};
-
-/**
- * $template.insert_link_list
- * @param key String
- * @param values Array
- */
-Template.prototype.insert_link_list = function(key, values) {
-  for (var i = 0; i < values.length; i++) {
-    var link_element = this.dom.link(values[i], values[i]);
-    var list_container = this.dom.element('li');
-    list_container.appendChild(link_element);
-    this.dom.append(key, list_container);
-  }
-};
-
-/**
- * $template.insert_list
- * @param key String
- * @param values Array
- */
-Template.prototype.insert_list = function(key, values) {
-  for (var i = 0; i < values.length; i++) {
-    var list_container = this.dom.element('li');
-    list_container.innerHTML = values[i];
-    this.dom.append(key, list_container);
+  /**
+   * @param href {string}
+   * @param text {string}
+   */
+  link_list: function(href, text) {
+    var link_element = this.builder.link(href, text);
+    var list_item = this.builder.element('li');
+    list_item.appendChild(link_element);
+    this.element.appendChild(list_item);
   }
 };
