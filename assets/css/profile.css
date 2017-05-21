@@ -4,3 +4,4 @@ h2 {font-size: 16px}
 header #name,
 header #email {font-weight:normal}
 header #email {float:right}
+footer #footnote {text-align: center}

@@ -30,8 +30,9 @@ var
     json.additional_links.each(function(value){
       $('additional-links').link_list(value, value);
     });
-  };
+    var elapsed_time = ((performance.now() - start_time) / 1000).toFixed(4);
+    $('footnote').html(json.footnote.replace(/%s/g, elapsed_time));
+  },
+  start_time = performance.now();
 
 new JsonClient('resume.json').call(initialize);
-
-$('footer-message').html('This resume was generated from <a href="https://github.com/ryaan-anthony/profile">https://github.com/ryaan-anthony/profile</a>.');
