@@ -45,23 +45,48 @@
         {
           "title": "Magento PTF",
           "homepage": "https://github.com/RadialCorp/magento-ptf-build",
-          "description": "PTF is our payments, tax, and fraud offering for our client’s webstores. This initiative was to address the immediate need of our client Everlast and their Magento webstore. My role as the lead engineer was to put together a small team of developers, QA testers, and managers to meet the tight deadlines and deliver a Magento extension and provide instructions for the system integrators on how to install and configure it.",
+          "description": "PTF is our payments, tax, and fraud offering for our client’s webstores. This initiative was to address the immediate need for a client's Magento webstore.",
           "responsibilities": [
+            "Put together a small team of developers, QA testers, and managers to meet the tight deadlines.",
             "Provided credit card and paypal checkout options via our payment service API",
             "Used braintree client side encryption and tokenization.",
             "Connected to message brokering system for payments responses.",
             "Lead initial development through to deployment."
           ],
-          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, Composer, Circle CI, RabbitMQ, jQuery"
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         },
         {
           "title": "Order Management UI",
           "homepage": "https://www.radial.com/omnichannel-technology",
-          "description": "",
+          "description": "The Radial Order Management product provides a common user interface for customer sales representatives to manage webstore orders for leading retailers and brands.",
           "responsibilities": [
-            ""
+            "Reported directly to project managers who provided detailed business requirements.",
+            "Met with designers and backend leads to architect solutions.",
+            "Worked closely with a team of 6 developers to set delivery expectations.",
+            "Created and groomed user stories for bi-weekly sprints.",
+            "Implemented logstash/kibana for all API request/responses.",
+            "Maintained above 90% code coverage for the added services.",
+            "Interviewed candidates for senior-level rails developer role.",
+            "Delivered on time despite losing a team member and on-boarding two non-rails developers.",
+            "Organized team outings and lunches.",
+            "Collaboratively designed and distributed valentines themed stickers with our product logo."
           ],
-          "environment": ""
+          "environment": "Ruby 2.3, Rails 4, Passenger 5, GOCD, Logstash, Kibana, Redis, MySQL, GitLab, Rally, Confluence"
+        },
+        {
+          "title": "Store Fulfillment UI",
+          "homepage": "https://www.radial.com/fulfillment-transportation",
+          "description": "The Radial Store Fulfillment product provides a common user interface for store associates to manage in-store pickup and ship to home orders.",
+          "responsibilities": [
+            "Joined architectural sessions for planning and discovery.",
+            "Set delivery schedule and groomed the backlog to keep development moving despite blocked dependencies.",
+            "Created services, generators, parsers, and tests.",
+            "UAT support and production readiness including improved deployments and load testing.",
+            "Actively participated in code review and peer coding.",
+            "Advocated for process changes to improve productivity and maintain accountability.",
+            "Regularly meet with sales and client services teams to discuss provisioning and integrations."
+          ],
+          "environment": "Ruby 2.3, Rails 4, Passenger 5, GOCD, Redis, MySQL, GitLab, Rally, Confluence"
         }
       ]
     },
