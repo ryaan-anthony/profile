@@ -53,7 +53,7 @@
             "Connected to message brokering system for payments responses.",
             "Lead initial development through to deployment."
           ],
-          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL6, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         },
         {
           "title": "Order Management UI",
@@ -86,7 +86,7 @@
             "Advocated for process changes to improve productivity and maintain accountability.",
             "Regularly meet with sales and client services teams to discuss provisioning and integrations."
           ],
-          "environment": "Ruby 2.3, Rails 4, Passenger 5, GOCD, Redis, MySQL, GitLab, Rally, Confluence"
+          "environment": "Ruby 2.3, Rails 4, Passenger 5, RHEL6, GOCD, Redis, MySQL, GitLab, Rally, Confluence"
         }
       ]
     },
@@ -108,7 +108,7 @@
             "Provided production support for operations team.",
             "Personally enabled several client webstore launches."
           ],
-          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL6, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         }
       ]
     },
@@ -120,12 +120,21 @@
       "end_date": "June 2015",
       "projects": [
         {
-          "title": "",
-          "description": "",
+          "title": "Magento webstore development",
+          "description": "With a client portfolio ranging from automotive and baked goods to jewelry and apparel, I helped enable this emerging web agency become a viable solutions provider for national/regional small/mid-market clients.",
           "responsibilities": [
-            ""
+            "Participated in the launch of over 20 Magento webstores",
+            "Custom integrations including payments, CRM, CMS, ERP, PIM, etc..",
+            "Advocated for process changes to improve project and task management.",
+            "Advocated for and implemented version control and automated deployments.",
+            "Participated in client discovery and review meetings.",
+            "Helped establish best practices and launch procedures.",
+            "Actively supported production clients.",
+            "Mentored and peer-coded with junior developers and interns.",
+            "Went to dozens of tech events and conferences while evangelizing the company brand.",
+            "Locked several deals earning a nice commission from new client sales."
           ],
-          "environment": ""
+          "environment": "PHP5.5, CENTOS, Redis, Memcached, Magento CE 1.7-1.9, Magento EE 1.12-1.14, MySQL, Trello, Beanstalk"
         }
       ]
     },
@@ -137,12 +146,17 @@
       "end_date": "Now",
       "projects": [
         {
-          "title": "",
-          "description": "",
+          "title": "Operations and Support",
+          "description": "My client portfolio covers over 12 Magento Enterprise webstores.",
           "responsibilities": [
-            ""
+            "Attend discussions with developers, designers, integrators, and systems administrators.",
+            "Provide stack analysis and implement best practices.",
+            "Architect solutions for custom integrations and unique presentation requirements.",
+            "Oversee and code review frontend development.",
+            "Ensure 3rd party code is properly vetted.",
+            "Optimize for peak."
           ],
-          "environment": ""
+          "environment": "PHP5.6, MySQL, RHEL6, Redis, Elasticsearch, Magento EE 1.13-1.14"
         }
       ]
     },
