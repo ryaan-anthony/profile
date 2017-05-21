@@ -53,7 +53,7 @@
             "Connected to message brokering system for payments responses.",
             "Lead initial development through to deployment."
           ],
-          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         },
         {
           "title": "Order Management UI",
@@ -98,12 +98,17 @@
       "end_date": "April 2016",
       "projects": [
         {
-          "title": "",
-          "description": "",
+          "title": "Magento Extension Development",
+          "homepage": "https://github.com/eBayEnterprise",
+          "description": "As a senior member of the Cheetah team I developed and maintained Magento Extensions to support our OMS product offerings.",
           "responsibilities": [
-            ""
+            "Participated in daily stand-ups, demos, and planning sessions.",
+            "Created classes and methods with extensibility and testability in mind.",
+            "Engaged QA testers when acceptance criteria was not clear.",
+            "Provided production support for operations team.",
+            "Personally enabled several client webstore launches."
           ],
-          "environment": ""
+          "environment": "PHP5.6, Magento EE 1.14, Nginx, RHEL5, PHPUnit, Composer, Circle CI, RabbitMQ, jQuery, Github, Rally, Jira, Confluence"
         }
       ]
     },
