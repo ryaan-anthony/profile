@@ -34,4 +34,4 @@ var
 
 new JsonClient('resume.json').call(initialize);
 
-$('footer-message').html('This page was <a href="assets/javascript/template.js">generated</a> from <a href="resume.json">resume.json</a>.');
+$('footer-message').html('This resume was generated from <a href="https://github.com/ryaan-anthony/profile">https://github.com/ryaan-anthony/profile</a>.');
