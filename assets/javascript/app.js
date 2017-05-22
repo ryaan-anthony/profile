@@ -8,27 +8,29 @@ var
     return new Template(element_id)
   },
   /**
-   * @param type {string}
-   * @returns {*|Element}
-   */
-  $element = function(type) {
-    return $('').builder.element(type);
-  },
-  /**
    * Build the interface from the json response
    * @param json
    */
   initialize = function(json) {
-    $('name').text(json.name);
-    $('title').text(json.title);
-    $('email').link('mailto:'+json.email, json.email);
+
+    $('header').element('span', json.name)
+      .element('strong', json.title)
+      .element('right', function(el) {
+        $(el).link('mailto:'+json.email, json.email)
+      }).element('hr', null);
+
     $('introduction').text(json.introduction);
-    json.summary.each(function(value) {
-      $('summary').element('li', value);
+
+    $('summary').list(function(ul){
+      json.summary.each(function(value){ $(ul).element('li', value) });
     });
-    json.certifications.each(function(value) {
-      $('certifications').element('li', value['type'] + ' (' + value['id'] + ') - ' + value['date']);
+
+    $('certifications').list(function(ul){
+      json.certifications.each(function(certification){
+        $(ul).element('li', certification['type'] + ' (' + certification['id'] + ') - ' + certification['date'])
+      });
     });
+
     json.experience.each(function(value) {
       $('experience').element('div', '<u>' + value.role + '</u> (' + value.start_date + ' to ' + value.end_date + ')');
       $('experience').element('div', value.company + ' ' + value.location);
@@ -38,18 +40,27 @@ var
         if (project.homepage) $('experience').link(project.homepage, project.homepage);
         $('experience').element('div', project.description);
         $('experience').element('p', 'Responsibilities:');
-        var container = $element('ul');
-        project.responsibilities.each(function(responsibility) {
-          $(container).element('li', responsibility);
+
+        $('experience').list(function(ul){
+          project.responsibilities.each(function(responsibility){
+            $(ul).element('li', responsibility)
+          });
         });
-        $('experience').append(container);
       });
     });
-    json.additional_links.each(function(value) {
-      $('additional-links').link_list(value, value);
+
+
+    $('footer').list(function(ul){
+      json.additional_links.each(function(value){
+        $(ul).element('li', function(li) {
+          $(li).link(value, value);
+        });
+      });
+    }).element('center', function(el) {
+      var elapsed_time = performance.now() - start_time;
+      var html_string = json.footnote.replace(/%s/g, elapsed_time.toFixed(2));
+      $(el).html(html_string);
     });
-    var elapsed_time = (performance.now() - start_time).toFixed(2);
-    $('footnote').html(json.footnote.replace(/%s/g, elapsed_time));
   },
   start_time = performance.now();
 

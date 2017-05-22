@@ -44,16 +44,22 @@ Template.prototype = {
    */
   append: function(child) {
     this.container.appendChild(child);
+    return this;
   },
 
   /**
    * @param type {string}
-   * @param value {string}
+   * @param value {string|Function}
    */
   element: function(type, value) {
     var element = this.builder.element(type);
-    element.innerHTML = value;
+    if (typeof value === 'function') {
+      value(element);
+    } else {
+      element.innerHTML = value;
+    }
     this.append(element);
+    return this;
   },
 
   /**
@@ -61,6 +67,7 @@ Template.prototype = {
    */
   html: function(value) {
     this.container.innerHTML = value;
+    return this;
   },
 
   /**
@@ -69,6 +76,7 @@ Template.prototype = {
   text: function(value) {
     var text = this.builder.text(value);
     this.append(text);
+    return this;
   },
 
   /**
@@ -78,16 +86,16 @@ Template.prototype = {
   link: function(href, text) {
     var link_element = this.builder.link(href, text);
     this.append(link_element);
+    return this;
   },
 
   /**
-   * @param href {string}
-   * @param text {string}
+   * @param callback {Function}
    */
-  link_list: function(href, text) {
-    var link_element = this.builder.link(href, text);
-    var list_item = this.builder.element('li');
-    list_item.appendChild(link_element);
-    this.append(list_item);
+  list: function(callback) {
+    var list = this.builder.element('ul');
+    callback(list);
+    this.append(list);
+    return this;
   }
 };
