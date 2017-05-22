@@ -28,10 +28,10 @@
       "date": "April 2015"
     }
   ],
-  "experience": [
+  "companies": [
     {
       "role": "Member of Technical Staff",
-      "company": "Radial, Inc - ",
+      "name": "Radial, Inc - ",
       "location": "King of Prussia, PA.",
       "start_date": "April 2016",
       "end_date": "Now",
@@ -87,7 +87,7 @@
     },
     {
       "role": "Senior Software Engineer",
-      "company": "eBay Enterprise - ",
+      "name": "eBay Enterprise - ",
       "location": "King of Prussia, PA.",
       "start_date": "July 2015",
       "end_date": "April 2016",
@@ -109,7 +109,7 @@
     },
     {
       "role": "Lead Magento Developer",
-      "company": "Inverse Paradox, LLC - ",
+      "name": "Inverse Paradox, LLC - ",
       "location": "Penndel, PA.",
       "start_date": "April 2012",
       "end_date": "June 2015",
@@ -136,7 +136,7 @@
     },
     {
       "role": "Magento Consultant",
-      "company": "",
+      "name": "",
       "location": "Philadelphia, PA.",
       "start_date": "January 2015",
       "end_date": "Now",
