@@ -1,11 +1,11 @@
 /**
  * Template provides common tools for manipulating the dom
  * @author Ryan Tulino rtulino@gmail.com
- * @param element_id {string}
+ * @param element {string|Element}
  * @constructor
  */
-function Template(element_id) {
-  this.container = element_id instanceof Object ? element_id : document.getElementById(element_id);
+function Template(element) {
+  this.container = element instanceof Element ? element : document.getElementById(element);
 }
 
 Template.prototype = {
@@ -58,8 +58,7 @@ Template.prototype = {
     } else {
       element.innerHTML = value;
     }
-    this.append(element);
-    return this;
+    return this.append(element);
   },
 
   /**
@@ -71,22 +70,12 @@ Template.prototype = {
   },
 
   /**
-   * @param value {string}
-   */
-  text: function(value) {
-    var text = this.builder.text(value);
-    this.append(text);
-    return this;
-  },
-
-  /**
    * @param href {string}
    * @param text {string}
    */
   link: function(href, text) {
     var link_element = this.builder.link(href, text);
-    this.append(link_element);
-    return this;
+    return this.append(link_element);
   },
 
   /**
@@ -95,7 +84,14 @@ Template.prototype = {
   list: function(callback) {
     var list = this.builder.element('ul');
     callback(list);
-    this.append(list);
-    return this;
+    return this.append(list);
+  },
+
+  /**
+   * @param value {string}
+   */
+  text: function(value) {
+    var text = this.builder.text(value);
+    return this.append(text);
   }
 };
