@@ -13,6 +13,8 @@ var
    */
   initialize = function(json) {
 
+    $('page-title').text(json.page_title);
+
     $('header').element('span', json.name)
       .element('strong', json.title)
       .element('right', function(right) {
