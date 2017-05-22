@@ -15,11 +15,9 @@ var
 
     $('page-title').text(json.page_title);
 
-    $('header').element('span', json.name)
-      .element('strong', json.title)
-      .element('right', function(right) {
-        $(right).link('mailto:'+json.email, json.email)
-      }).element('hr', null);
+    $('header').element('address', function(right) { $(right).link('mailto:'+json.email, json.email) })
+      .element('h1', function(h1) { $(h1).element('span', json.name).element('strong', json.title) })
+      .element('hr', null);
 
     $('introduction').text(json.introduction);
 
@@ -39,15 +37,16 @@ var
         $(dl).element('dt', function(dt) {
           $(dt).element('u', company.role)
             .element('span', ' (' + company.start_date + ' to ' + company.end_date + ')')
-            .element('div', company.name + ' ' + company.location)
-            .element('br', null);
+            .element('p', company.name + ' ' + company.location);
         });
 
         company.projects.each(function(project) {
           $(dl).element('dt', function(dt) {
-            $(dt).element('div', project.title);
+            $(dt).element('p', function(p) {
+              $(p).element('em', project.title);
+            });
             if (project.homepage) $(dt).link(project.homepage, project.homepage);
-            $(dt).element('div', project.description)
+            $(dt).element('p', project.description)
               .element('p', 'Responsibilities:')
               .element('ul', function (ul) {
                 project.responsibilities.each(function (responsibility) {
