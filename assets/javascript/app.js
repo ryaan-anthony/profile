@@ -34,25 +34,29 @@ var
     });
 
     json.companies.each(function(company) {
+      $('experience').element('dl', function(dl) {
 
-      $('experience').element('div', function(div) {
-        $(div).element('u', company.role)
-          .element('span', ' (' + company.start_date + ' to ' + company.end_date + ')');
-      }).element('div', company.name + ' ' + company.location);
+        $(dl).element('dt', function(dt) {
+          $(dt).element('u', company.role)
+            .element('span', ' (' + company.start_date + ' to ' + company.end_date + ')')
+            .element('div', company.name + ' ' + company.location)
+            .element('br', null);
+        });
 
-      company.projects.each(function(project) {
-        $('experience').element('dl', function(dl) {
-          $(dl).element('dt', project.title);
-          if (project.homepage) $(dl).link(project.homepage, project.homepage);
-          $(dl).element('dt', project.description);
-        }).element('p', 'Responsibilities:')
-          .element('ul', function(ul){
-          project.responsibilities.each(function(responsibility){
-            $(ul).element('li', responsibility)
+        company.projects.each(function(project) {
+          $(dl).element('dt', function(dt) {
+            $(dt).element('div', project.title);
+            if (project.homepage) $(dt).link(project.homepage, project.homepage);
+            $(dt).element('div', project.description)
+              .element('p', 'Responsibilities:')
+              .element('ul', function (ul) {
+                project.responsibilities.each(function (responsibility) {
+                  $(ul).element('li', responsibility)
+                });
+              });
           });
         });
       });
-
     });
 
     $('footer').element('ul', function(ul){
