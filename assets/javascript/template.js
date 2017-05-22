@@ -79,15 +79,6 @@ Template.prototype = {
   },
 
   /**
-   * @param callback {Function}
-   */
-  list: function(callback) {
-    var list = this.builder.element('ul');
-    callback(list);
-    return this.append(list);
-  },
-
-  /**
    * @param value {string}
    */
   text: function(value) {

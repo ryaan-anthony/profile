@@ -23,36 +23,39 @@ var
 
     $('introduction').text(json.introduction);
 
-    $('summary').list(function(ul){
+    $('summary').element('ul', function(ul){
       json.summary.each(function(value){ $(ul).element('li', value) });
     });
 
-    $('certifications').list(function(ul){
+    $('certifications').element('ul', function(ul){
       json.certifications.each(function(certification){
         $(ul).element('li', certification['type'] + ' (' + certification['id'] + ') - ' + certification['date'])
       });
     });
 
     json.companies.each(function(company) {
+
       $('experience').element('div', function(div) {
         $(div).element('u', company.role)
           .element('span', ' (' + company.start_date + ' to ' + company.end_date + ')');
       }).element('div', company.name + ' ' + company.location);
+
       company.projects.each(function(project) {
         $('experience').element('dl', function(dl) {
           $(dl).element('dt', project.title);
           if (project.homepage) $(dl).link(project.homepage, project.homepage);
           $(dl).element('dt', project.description);
         }).element('p', 'Responsibilities:')
-          .list(function(ul){
+          .element('ul', function(ul){
           project.responsibilities.each(function(responsibility){
             $(ul).element('li', responsibility)
           });
         });
       });
+
     });
 
-    $('footer').list(function(ul){
+    $('footer').element('ul', function(ul){
       json.additional_links.each(function(value){
         $(ul).element('li', function(li) { $(li).link(value, value) });
       });
